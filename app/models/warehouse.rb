@@ -1,6 +1,5 @@
 class Warehouse < ApplicationRecord
-  has_many :warehouse_items
-  has_many :items, through: :warehouse_items
+  has_many :items
 
   validates_presence_of :location
 end
