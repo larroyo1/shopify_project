@@ -2,11 +2,11 @@
 
 CRUD application that allows you to manage a warehouses inventory by viewing, creating, editing, and deleting it's items. Built for the Shopify internship opportunity.
 
-##Author 
+## Author 
 
 - Luis Arroyo [github](https://github.com/larroyo1)
 
-##Technologies Used
+## Technologies Used
 
 Rails Version 5.2.6
 Ruby Version 2.7.2 
@@ -14,7 +14,7 @@ Postgresql Database
 
 Ruby gems used for testing: RSpec, launchy, capybara, shoulda-matchers, & pry
 
-##Getting Started 
+## Getting Started 
 
 1. Clone this repo to your local enviornment
 2. Enter the root directory of this project 
@@ -27,7 +27,7 @@ Ruby gems used for testing: RSpec, launchy, capybara, shoulda-matchers, & pry
 If you would like to run the test suite, run: 
 ```bundle exec rspec```
 
-##Database Design 
+## Database Design 
 
 This app uses a postgresql database with two tables: 
 
