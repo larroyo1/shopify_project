@@ -23,7 +23,7 @@ Ruby gems used for testing: Launchy, Capybara, shoulda-matchers, & Pry
   - ```bundle install``` 
   - ```rails db:{create,migrate,seed}```
   - ```rails s```
-4. Visit 'localhost:3000 to see the app in action! 
+4. Visit 'localhost:3000' in your web browser to see the app in action! 
 
 If you would like to run the test suite, run: 
 ```bundle exec rspec```
