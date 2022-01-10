@@ -25,6 +25,8 @@ Ruby gems used for testing: Launchy, Capybara, shoulda-matchers, & Pry
   - ```rails s```
 4. Visit 'localhost:3000' in your web browser to see the app in action! 
 
+You can also see the app deployed here: https://safe-spire-76414.herokuapp.com
+
 If you would like to run the test suite, run: 
 ```bundle exec rspec```
 
