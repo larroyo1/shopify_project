@@ -1,0 +1,16 @@
+<h1>New Item</h1>
+
+<%= form_with model: [@warehouse, @item], local: true do |form| %>
+  <p><%= form.label :name %>
+  <%= form.text_field :name %></p>
+
+  <p><%= form.label :quantity %>
+  <%= form.number_field :quantity%></p>
+
+  <p><%= form.label :price %>
+  <%= form.number_field :price %></p>
+
+  <p><%= form.submit "Add Item" %></p>
+<% end %>
+
+<%= button_to 'Go Back', warehouse_path(@warehouse.id), method: :get %>
