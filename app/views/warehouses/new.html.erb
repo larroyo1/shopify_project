@@ -1,0 +1,10 @@
+<h1>Add Warehouse</h1>
+
+<%= form_with model: @warehouse, local: true do |form| %>
+  <p><%= form.label :location %>
+  <%= form.text_field :location %></p>
+
+  <p><%= form.submit "Add Warehouse" %></p>
+<% end %>
+
+<%= button_to 'Go Back', warehouses_path, method: :get %>
