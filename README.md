@@ -37,3 +37,4 @@ This app uses a postgresql database with two tables:
 
 The relationship is a one to many relationship, meaning a warehouse has many items, and an item belongs to one warehouse.
 
+![Screen Shot 2022-01-10 at 12 58 56 AM](https://user-images.githubusercontent.com/79363697/148733846-2ab58d48-f3ed-46c2-9bc7-425a21dc5218.png)
