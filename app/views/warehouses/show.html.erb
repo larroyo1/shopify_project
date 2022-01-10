@@ -1,0 +1,13 @@
+<h1><%= @warehouse.location %> Warehouse Inventory</h1>
+
+<%= button_to 'Back to Warehouses', warehouses_path, method: :get %>
+<br>
+<%= button_to 'Add Item To This Warehouse', "/warehouses/#{@warehouse.id}/items/new", method: :get %>
+
+<% @warehouse.items.each do |item| %>
+  <p><b><%= item.name %></b></p>
+     <p>Quantity: <%= item.quantity %></p>
+     <p>Price: $<%= item.price %></p>
+     <p><%= button_to 'Edit or Delete Item', edit_warehouse_item_path(@warehouse.id, item.id), method: :get %></p>
+<% end %>
+<br>
