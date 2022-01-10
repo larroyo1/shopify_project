@@ -1,24 +1,38 @@
-# README
+# Shopify Internship Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+CRUD application that allows you to manage a warehouses inventory by viewing, creating, editing, and deleting it's items. Built for the Shopify internship opportunity.
 
-Things you may want to cover:
+##Author 
 
-* Ruby version
+- Luis Arroyo [github](https://github.com/larroyo1)
 
-* System dependencies
+##Technologies Used
 
-* Configuration
+Rails Version 5.2.6
+Ruby Version 2.7.2 
+Postgresql Database
 
-* Database creation
+Ruby gems used for testing: RSpec, launchy, capybara, shoulda-matchers, & pry
 
-* Database initialization
+##Getting Started 
 
-* How to run the test suite
+1. Clone this repo to your local enviornment
+2. Enter the root directory of this project 
+3. Run the following in your terminal: 
+  ```bundle install``` 
+  ```rails db:{create,migrate,seed}```
+  ```rails s```
+4. Visit 'localhost:3000 to see the app in action! 
 
-* Services (job queues, cache servers, search engines, etc.)
+If you would like to run the test suite, run: 
+```bundle exec rspec```
 
-* Deployment instructions
+##Database Design 
 
-* ...
+This app uses a postgresql database with two tables: 
+
+1. A warehouses(parent) table that has one column for location.
+2. A items(child) table with three columns for name, quantity, and price of the item.
+
+The relationship is a one to many relationship, meaning a warehouse has many items, and an item belongs to one warehouse.
+
