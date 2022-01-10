@@ -8,11 +8,12 @@ CRUD application that allows you to manage a warehouses inventory by viewing, cr
 
 ## Technologies Used
 
-Rails Version 5.2.6
-Ruby Version 2.7.2 
-Postgresql Database
+-Rails Version 5.2.6
+-Ruby Version 2.7.2 
+-Postgresql Database
+-Test Suite built with RSpec
 
-Ruby gems used for testing: RSpec, launchy, capybara, shoulda-matchers, & pry
+Ruby gems used for testing: Launchy, Capybara, shoulda-matchers, & Pry
 
 ## Getting Started 
 
