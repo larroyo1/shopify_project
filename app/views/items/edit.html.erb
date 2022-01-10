@@ -1,0 +1,17 @@
+<h1>Edit Item</h1>
+
+<%= form_with model: [@warehouse, @item], local: true do |form| %>
+  <p><%= form.label :name %>
+  <%= form.text_field :name %></p>
+
+  <p><%= form.label :quantity %>
+  <%= form.number_field :quantity%></p>
+
+  <p><%= form.label :price %>
+  <%= form.number_field :price %></p>
+
+  <p><%= form.submit "Update Item" %></p>
+<% end %>
+
+<br>
+<%= button_to 'Delete Item', "/warehouses/#{@warehouse.id}/items/#{@item.id}", method: :delete %>
