@@ -17,6 +17,8 @@ Ruby gems used for testing: Launchy, Capybara, shoulda-matchers, & Pry
 
 ## Getting Started 
 
+If you need to setup your enviornment with Rails, click [here](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-macos) for a great guide.
+
 1. Clone this repo to your local enviornment
 2. Enter the root directory of this project 
 3. Run the following in your terminal: 
