@@ -2,8 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Item do
   describe 'relationships' do
-    it {should have_many(:warehouse_items)}
-    it {should have_many(:warehouses).through(:warehouse_items)}
+    it {should belong_to(:warehouse)}
   end
 
   describe 'validations' do
