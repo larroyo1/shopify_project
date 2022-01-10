@@ -20,9 +20,9 @@ Ruby gems used for testing: Launchy, Capybara, shoulda-matchers, & Pry
 1. Clone this repo to your local enviornment
 2. Enter the root directory of this project 
 3. Run the following in your terminal: 
-  ```bundle install``` 
-  ```rails db:{create,migrate,seed}```
-  ```rails s```
+  - ```bundle install``` 
+  - ```rails db:{create,migrate,seed}```
+  - ```rails s```
 4. Visit 'localhost:3000 to see the app in action! 
 
 If you would like to run the test suite, run: 
