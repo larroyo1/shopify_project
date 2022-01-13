@@ -19,11 +19,6 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @choices = []
-    warehouses = Warehouse.all
-    warehouses.each do |warehouse|
-    @choices << warehouse.location
-    end
     @warehouse = Warehouse.find(params[:warehouse_id])
     @item = Item.find(params[:id])
   end
