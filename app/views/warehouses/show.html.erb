@@ -3,6 +3,9 @@
 <%= button_to 'Back to Warehouses', warehouses_path, method: :get %>
 <br>
 <%= button_to 'Add Item To This Warehouse', "/warehouses/#{@warehouse.id}/items/new", method: :get %>
+<br>
+<p><%= button_to 'Delete this Warehouse', warehouse_path(@warehouse.id), method: :delete %></p>
+<br>
 
 <% @warehouse.items.each do |item| %>
   <p><b><%= item.name %></b></p>

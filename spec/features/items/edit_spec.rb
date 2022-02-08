@@ -20,9 +20,9 @@ RSpec.describe 'item edit page' do
       visit edit_warehouse_item_path(warehouse.id, item.id)
 
       click_button 'Delete Item'
-      
+
       expect(current_path).to eq(warehouse_path(warehouse.id))
-      expect(page).to_not have_content(item.name)
+      expect(page).to have_content("#{item.name} removed from the #{warehouse.location} warehouse.")
     end
   end
 end

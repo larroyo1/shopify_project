@@ -14,6 +14,7 @@ RSpec.describe 'new warehouse item page' do
       click_button 'Add Item'
 
       expect(current_path).to eq(warehouse_path(@warehouse.id))
+      expect(page).to have_content('Socks')
     end
   end
 
@@ -24,6 +25,17 @@ RSpec.describe 'new warehouse item page' do
       click_button 'Add Item'
 
       expect(current_path).to_not eq(warehouse_path(@warehouse.id))
+      expect(page).to_not have_content('Socks')
     end
-  end 
+
+    it 'wont add item if quantity is negative' do
+      fill_in 'Name', with: 'Socks'
+      fill_in 'Price', with: 0
+      fill_in 'Quantity', with: 0
+      click_button 'Add Item'
+
+      expect(current_path).to_not eq(warehouse_path(@warehouse.id))
+      expect(page).to_not have_content('Socks')
+    end
+  end
 end

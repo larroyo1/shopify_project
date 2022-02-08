@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'warehouse show page' do
   before(:each) do
-    @warehouse = Warehouse.create!(location: 'Denver')
+    @warehouse = Warehouse.create!(location: 'Houston')
     @item_1 = @warehouse.items.create!(name: 'Shirt', quantity: 5, price: 10)
     @item_2 = @warehouse.items.create!(name: 'Hat', quantity: 11, price: 17)
     visit warehouse_path(@warehouse.id)
@@ -22,5 +22,12 @@ RSpec.describe 'warehouse show page' do
     click_button 'Add Item'
 
     expect(current_path).to eq(new_warehouse_item_path(@warehouse.id))
+  end
+
+  it 'has a button to delete warehouse' do
+    click_button 'Delete this Warehouse'
+
+    expect(current_path).to eq(warehouses_path)
+    expect(page).to have_content("#{@warehouse.location} warehouse removed.")
   end
 end
