@@ -5,6 +5,8 @@ class WarehousesController < ApplicationController
 
   def show
     @warehouse = Warehouse.find(params[:id])
+    location = MapFacade.coordinates(@warehouse.location)
+    @weather = WeatherFacade.weather_info(location)
   end
 
   def new
@@ -25,7 +27,7 @@ class WarehousesController < ApplicationController
 
   def destroy
     warehouse = Warehouse.find(params[:id])
-    
+
     warehouse.destroy
     redirect_to warehouses_path
     flash[:notice] = "#{warehouse.location} warehouse removed."
