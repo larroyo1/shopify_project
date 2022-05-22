@@ -2,10 +2,6 @@
 <br>
 <%= button_to 'Back to Warehouses', warehouses_path, method: :get %>
 <br>
-<h3>Current Weather in <%= @warehouse.location %>:</h3>
-<p>Temperature: <%= @weather.temp %> F</p>
-<p>Conditions: <%= @weather.description %></p>
-<br>
 <%= button_to 'Add Item To This Warehouse', "/warehouses/#{@warehouse.id}/items/new", method: :get %>
 <br>
 <p><%= button_to 'Delete this Warehouse', warehouse_path(@warehouse.id), method: :delete %></p>

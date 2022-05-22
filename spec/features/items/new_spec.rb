@@ -28,7 +28,7 @@ RSpec.describe 'new warehouse item page' do
       expect(page).to_not have_content('Socks')
     end
 
-    it 'wont add item if quantity is negative' do
+    it 'wont add item if quantity is 0' do
       fill_in 'Name', with: 'Socks'
       fill_in 'Price', with: 0
       fill_in 'Quantity', with: 0

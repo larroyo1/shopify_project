@@ -5,8 +5,6 @@ class WarehousesController < ApplicationController
 
   def show
     @warehouse = Warehouse.find(params[:id])
-    location = MapFacade.coordinates(@warehouse.location)
-    @weather = WeatherFacade.weather_info(location)
   end
 
   def new
